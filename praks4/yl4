@@ -1,0 +1,23 @@
+#/bin/bash
+# busside arvu arvutamine
+
+echo -n "Sisesta reisijate arv: "
+read reisijad
+
+echo -n "Kohtade arv ühes bussis: "
+read kohad_bussis
+
+bussid=$(( reisijad / kohad_bussis ))
+
+echo "Täis busside arv on $bussid"
+
+maha_jaanud=$(( reisijad % kohad_bussis ))
+
+echo "Maha on jäänud $maha_jaanud inimest"
+
+if test $maha_jaanud -gt 0
+then
+	bussid=$(( $bussid + 1 ))
+fi
+
+echo "Kokku on vaja $bussid täisbussi"
