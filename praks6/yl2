@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+#sisestakse arv ja arvutatakse jääki summa
+#
+echo "Sisesta suvaline täisarv"
+
+read -a arv
+arv1=$arv
+summa=0
+while [ $arv -ne 0 ]
+do
+	jaak=$(($arv % 10))
+	summa=$(($summa + $jaak))
+	arv=$(($arv / 10))
+done
+echo "Arvu $arv1 numbrite summa on $summa"
+#lõpp
