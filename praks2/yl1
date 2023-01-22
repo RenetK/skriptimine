@@ -1,0 +1,5 @@
+#!/bin/bash
+# See skript tervitab kasutajat kujul "Tere, kasutaja!"
+echo -n "Tere, "
+echo -n `whoami`
+echo "!"
